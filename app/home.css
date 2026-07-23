@@ -1,0 +1,300 @@
+.park-home {
+  min-height: 100vh;
+  margin-left: 0;
+  overflow: hidden;
+  background: #09142f;
+  color: white;
+}
+
+.home-topbar {
+  width: min(1440px, 100%);
+  min-height: 104px;
+  margin: 0 auto;
+  padding: 20px 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.home-topbar .brand-mark-image { width: 58px; }
+.home-topbar .brand-lockup-v2 { font-size: 29px; }
+
+.home-topbar > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #9ca8c5;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home-topbar > span i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 0 4px rgba(96,213,167,.15);
+}
+
+.home-hero {
+  position: relative;
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 78px 54px 94px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, .88fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 90px);
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  right: -185px;
+  top: -190px;
+  border: 72px solid rgba(23,70,209,.35);
+  border-radius: 50%;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  right: 80px;
+  bottom: 72px;
+  width: 190px;
+  height: 120px;
+  opacity: .28;
+  background-image: radial-gradient(#7993e5 1.2px, transparent 1.2px);
+  background-size: 10px 10px;
+  transform: rotate(-8deg);
+}
+
+.home-hero-copy { position: relative; z-index: 2; }
+
+.home-hero .eyebrow { color: #8ea6ff; }
+
+.home-hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(52px, 5.5vw, 80px);
+  line-height: .9;
+  letter-spacing: -4.4px;
+}
+
+.home-hero h1 > span { display: block; white-space: nowrap; }
+
+.home-hero h1 em {
+  color: var(--orange);
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.home-hero-copy > p:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+  margin: 32px 0 0;
+  color: #aeb8d2;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.home-video-stage {
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 24px;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 34px 80px rgba(0,0,0,.34);
+}
+
+.home-video-stage video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #f8fbfd;
+}
+
+.resort-directory {
+  padding: 78px 54px 94px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.resort-group {
+  width: min(1332px, 100%);
+  margin: 0 auto;
+}
+
+.resort-group + .resort-group {
+  margin-top: 86px;
+  padding-top: 80px;
+  border-top: 1px solid #cbc9c3;
+}
+
+.resort-group-heading {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.resort-group-heading span {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.resort-group-heading h2 {
+  margin: 9px 0 0;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  font-size: clamp(34px, 4vw, 57px);
+  line-height: .95;
+  letter-spacing: -2px;
+}
+
+.resort-group-heading > a {
+  padding-bottom: 5px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.resort-group-heading > a b { margin-left: 8px; font-size: 18px; }
+
+.park-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.park-directory-card {
+  position: relative;
+  min-height: 335px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d7d5ce;
+  border-radius: 17px;
+  background: var(--card);
+  box-shadow: 0 18px 42px rgba(15,31,68,.055);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.park-directory-card:hover {
+  transform: translateY(-6px);
+  border-color: #aeb5c4;
+  box-shadow: 0 26px 50px rgba(15,31,68,.1);
+}
+
+.park-directory-card > span {
+  color: #9aa0ad;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.park-directory-card > .park-icon { margin: 28px 0 auto; }
+
+.park-directory-card > p {
+  margin: 24px 0 7px;
+  color: var(--blue);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.park-directory-card h3 {
+  margin: 0;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 1.02;
+  letter-spacing: -.8px;
+}
+
+.park-directory-card small {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.park-directory-card > strong {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.park-directory-card > strong b { font-size: 17px; }
+
+.home-footer {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 34px 54px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  color: #77829d;
+  font-size: 8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.home-footer p { margin: 0; }
+
+@media (max-width: 1050px) {
+  .home-hero { grid-template-columns: 1fr; }
+  .home-video-stage { width: min(760px, 100%); }
+  .park-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 650px) {
+  .home-topbar { min-height: 82px; padding: 13px 20px; }
+  .home-topbar .brand-mark-image { width: 46px; }
+  .home-topbar .brand-lockup-v2 { font-size: 23px; }
+  .home-topbar > span { display: none; }
+  .home-hero { padding: 68px 20px 76px; }
+  .home-hero h1 { font-size: clamp(37px, 11vw, 56px); letter-spacing: -3px; }
+  .home-hero-copy > p:last-child { font-size: 14px; }
+  .home-video-stage { padding: 6px; border-radius: 17px; }
+  .home-video-stage video { border-radius: 12px; }
+  .resort-directory { padding: 58px 20px 70px; }
+  .resort-group + .resort-group { margin-top: 58px; padding-top: 56px; }
+  .resort-group-heading { display: grid; align-items: start; }
+  .resort-group-heading > a { justify-self: start; }
+  .park-directory-grid { grid-template-columns: 1fr; }
+  .park-directory-card { min-height: 300px; }
+  .home-footer { padding: 30px 20px; display: grid; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .park-directory-card { transition: none; }
+  .home-video-stage {
+    aspect-ratio: 16 / 9;
+    background: #f8fbfd url("/brand/passday-mark.png") center / contain no-repeat;
+  }
+  .home-video-stage video { display: none; }
+}
